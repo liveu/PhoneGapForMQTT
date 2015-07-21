@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<title>폰갭 기본</title>
+    
+		<link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+		
+		<style>
+			p {
+				color:red;
+				font-size:40px;
+			}
+		</style>
+		
+	
+    	<script src="cordova-2.9.1.js"></script>
+		<script src="jquery-2.1.3.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		
+		<script>
+			function onLoad() {
+				document.addEventListener("deviceready", onDeviceReady, false);
+			}
+
+			function onDeviceReady() {
+				navigator.splashscreen.hide();
+				
+				alert("폰갭이 준비되었습니다.");
+				
+			}
+			
+			function changeTitle()  {
+				//document.getElementById("subtitle").innerHTML = "우리 회사 소개";
+				$("#subtitle").html("우리 회사 소개");
+			}
+			
+    	</script>
+	</head>
+	<body onload="onLoad()">
+			
+		    
+		<div data-role="page">
+			<div data-role="header">
+				<h1 id="subtitle" onclick="changeTitle()">회사 소개</h1>
+			</div>
+		
+			<br>
+			
+			<p>q</p>
+			
+			<hr/>
+			
+			<ul data-role="listview">
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">제품소개</a></li>
+				<li><a href="#">고객지원</a></li>
+			</ul>
+		
+		</div>
+
+		
+	</body>
+</html>
