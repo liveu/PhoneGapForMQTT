@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('org.eclipse.paho.android.service-1.0.3-20150721.040700-121.jar'))

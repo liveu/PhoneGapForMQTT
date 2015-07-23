@@ -1,9 +1,14 @@
 package org.androidtown.gap.basic;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
+import org.androidtown.gap.basic.service.MqttBroadCastService;
 import org.apache.cordova.DroidGap;
 
 
@@ -15,6 +20,10 @@ public class MainActivity extends DroidGap {
         setContentView(R.layout.activity_main);
 
         super.setIntegerProperty("splashscreen", R.drawable.splash);
+        Log.d("shchoi", "6666666666666666666666");
+        Intent intent = new Intent(this, MqttBroadCastService.class);
+        startService(intent);
+        Log.d("shchoi", "8888888888888888888888");
         super.loadUrl("file:///android_asset/www/index.html", 1500);
 
     }
